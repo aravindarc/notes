@@ -1,5 +1,6 @@
 package aravind.note;
 import java.sql.*;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import org.apache.struts.action.ActionForm;
@@ -42,8 +43,6 @@ public class Note {
     }
 
     private Connection createConnection() throws SQLException {
-        if(title.length() == 0)
-            throw new SQLException("Please provide username");
         try {
             Class.forName(config.getProperty("db.db"));
         } catch (ClassNotFoundException e) {
@@ -71,5 +70,20 @@ public class Note {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public ResultSet getNotes(String username) {
+
+        String sql = "SELECT * FROM notes WHERE username = '" + username + "';";
+        ResultSet r = null;
+        logger.info(sql);
+
+        try {
+            r = createConnection().createStatement().executeQuery(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return r;
     }
 }

@@ -8,6 +8,7 @@ import tools.LoggerInitiator;
 
 import javax.servlet.http.HttpServletRequest;
 import java.awt.print.Book;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
@@ -55,6 +56,7 @@ public class NoteForm extends ActionForm {
     {
         ActionErrors errors = new ActionErrors();
 
+        ResultSet r1 = new Note().getNotes(request.getSession().getAttribute("username").toString());
         logger.info("in validate");
 
         if(note.getTitle() == null || note.getContent() == null) {

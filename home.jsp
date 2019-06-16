@@ -1,5 +1,9 @@
 <%@ page language="java" %>
 <%@ page import="tools.*" %>
+<%@ page import="aravind.note.Note " %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.util.logging.Logger" %>
+
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%
@@ -61,10 +65,10 @@
 
             .main {
               text-align: left;
-              background: cornflowerblue;
+              background: gainsboro;
             }
 
-            .header {background: coral;}
+            .header {background: darkmagenta;}
             .footer {background: lightgreen;}
             .aside {background: moccasin;}
 
@@ -86,7 +90,35 @@
           <li><a href="index.jsp">Logout</a></li>
         </ul>
 
+        <%
 
+            ResultSet r = null;
+            Logger logger = LoggerInitiator.getLogger();
+            try {
+                logger.info(session.getAttribute("username").toString());
+                r = new Note().getNotes(session.getAttribute("username").toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if(r != null)
+                while(r.next()) {
+                    out.println("<div class=\"flex-container\">");
+                    out.println("<header class=\"header\">" + r.getString("title") + "</header>");
+                    out.println("<article class=\"main\">");
+                    out.println("<p>" + r.getString("content") + "</p>");
+                    out.println("</article>");
+                    try {
+                    out.println("<footer class=\"footer\">" + "Created On: " + r.getDate("created_time") + "       " + "Edited On: " + r.getDate("edited_time") + "</footer>");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    out.println("</div>");
+                }
+            else {
+                logger.info("r is null");
+            }
+
+        %>
         <div class="flex-container">
           <header class="header">Header</header>
           <article class="main">

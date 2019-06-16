@@ -83,7 +83,6 @@
         <ul>
           <li><a href="home.jsp">Home</a></li>
           <li><a href="new.jsp">New Note</a></li>
-          <li><a href="index.jsp">Logout</a></li>
         </ul>
 
         <html:form action="newNote" style="margin-top: 10px;" method="POST">
