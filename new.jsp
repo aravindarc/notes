@@ -93,7 +93,7 @@
           <textarea name="content" rows="25" cols="100" placeholder="Note goes here..."></textarea>
           <br>
           <input type="submit">
-        <html/form>
+        </html:form>
         <script>
             if ( window.history.replaceState ) {
               window.history.replaceState( null, null, window.location.href );

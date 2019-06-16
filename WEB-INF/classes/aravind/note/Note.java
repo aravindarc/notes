@@ -1,4 +1,4 @@
-package aravind.author;
+package aravind.note;
 import java.sql.*;
 import java.util.logging.Logger;
 
@@ -29,6 +29,10 @@ public class Note {
         this.content = content;
     }
 
+    public String getContent() {
+        return this.content;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -56,75 +60,16 @@ public class Note {
         return connection;
     }
 
-    public void contruct() {
+    public void load() {
 
-        String sql = "INSERT INTO author(username, password) "
-                + "VALUES('" + username + "', '" + password + "');";
+        String sql = "INSERT INTO notes(title, content, username) "
+                + "VALUES('" + title + "', '" + content + "', '" + username +"');";
+
         try {
             logger.info("Attempting to insert into DB using query: " + sql);
             createConnection().createStatement().execute(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    private void load() throws SQLException {
-
-        String sql = "SELECT * FROM author WHERE username = '" + username + "';";
-
-        ResultSet r = createConnection().createStatement().executeQuery(sql);
-
-        if(r.next()) {
-            password = r.getString("password");
-        }
-        else {
-            throw new SQLException("No user with username=" + username + " found!");
-        }
-    }
-
-    public boolean checkIfUsernameIsUnique() {
-
-        String sql = "SELECT * FROM author WHERE username = '" + username + "';";
-
-
-        try {
-            ResultSet r = createConnection().createStatement().executeQuery(sql);
-
-            if (r.next()) {
-                return false;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return true;
-    }
-
-    public boolean matchPassword() {
-
-        String sql = "SELECT * FROM author WHERE username = '" + username + "';";
-
-        logger.info("sql query used: " + sql);
-
-        try {
-            ResultSet r = createConnection().createStatement().executeQuery(sql);
-
-            if (r.next()) {
-
-                String dbPassword = r.getString("password");
-
-                logger.warning("dbPassword: " + dbPassword + ", " + "password: " + password);
-                if(dbPassword.equals(password))
-                    return true;
-                else
-                    return false;
-            }
-            else
-                logger.warning("no username entry");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return false;
     }
 }

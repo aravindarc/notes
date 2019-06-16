@@ -17,7 +17,7 @@
    These are the default error messages associated with
    each validator defined in this file.  They should be
    added to your projects ApplicationResources.properties
-   file or you can associate new ones by modifying the
+   file or you can associate note ones by modifying the
    pluggable validators msg attributes in this file.
 
    # Struts Validator Error Messages

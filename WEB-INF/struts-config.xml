@@ -60,7 +60,7 @@
     <form-beans>
         <form-bean name="loginForm" type="aravind.login.LoginForm" />
         <form-bean  name="authorForm" type="aravind.author.AuthorForm"/>
-        <form-bean name="newForm" type="aravind.new.newForm" />
+        <form-bean name="noteForm" type="aravind.note.NoteForm" />
     <!-- sample form bean descriptor for an ActionForm
         <form-bean
             name="inputForm"
@@ -105,7 +105,7 @@
         
         <forward  name="authorCreated" path="/index.jsp"/>
         <forward name="loginSuccess" path="/home.jsp" />
-        <forward name="newSuccess" path="/home.jsp" />
+        <forward name="noteCreated" path="/home.jsp" />
     </global-forwards>
 
         
@@ -136,8 +136,8 @@
 
         <action
                 path="/newNote"
-                type="aravind.new.Note"
-                name="newForm"
+                type="aravind.note.NoteAction"
+                name="noteForm"
                 scope="request"
                 input="/new.jsp"/>
 
