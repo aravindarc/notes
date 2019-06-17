@@ -24,12 +24,7 @@ public class AuthorAction extends Action {
             throws Exception
     {
         logger.info("Start execute(" + form + ") . . ." );
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        Author author = new Author();
-        author.setUsername(username);
-        author.setPassword(password);
-        req.setAttribute("AUTHOR", author);
+
         return mapping.findForward("authorCreated");
     }
 }

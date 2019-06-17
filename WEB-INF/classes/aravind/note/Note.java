@@ -62,7 +62,7 @@ public class Note {
     public void load() {
 
         String sql = "INSERT INTO notes(title, content, username) "
-                + "VALUES('" + title + "', '" + content + "', '" + username +"');";
+                + "VALUES('" + title + "', '" + content.replace("'", "\\'") + "', '" + username +"');";
 
         try {
             logger.info("Attempting to insert into DB using query: " + sql);

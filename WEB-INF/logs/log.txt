@@ -1,110 +1,248 @@
-<html><head><title>Logging: 2019-06-17 03:35:37869</title></head><body><pre>
+<html><head><title>Logging: 2019-06-17 12:06:32503</title></head><body><pre>
 <table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:37866</td>
-	<td> aravind.login.LoginForm.validate: </td>
-	<td><b>in validate</b></td>
-</tr>
-</table><table border="1"><tr>
-	<td style="color:red"<b>WARNING</b></td>
-	<td>2019-06-17 03:35:37870</td>
-	<td> aravind.login.LoginForm.validate: </td>
-	<td><b>in validate() username or password is null</b></td>
-</tr>
-</table><table border="1"><tr>
-	<td style="color:red"<b>WARNING</b></td>
-	<td>2019-06-17 03:35:37873</td>
-	<td> aravind.login.LoginForm.validate: </td>
-	<td><b>{null=[error.null[]]}</b></td>
-</tr>
-</table><table border="1"><tr>
-	<td>INFO</td>
-	<td>2019-06-17 03:35:37958</td>
+	<td>2019-06-17 12:06:32502</td>
 	<td> org.apache.jsp.index_jsp._jspService: </td>
 	<td><b>index.jsp accessed</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:43584</td>
+	<td>2019-06-17 12:06:39936</td>
 	<td> aravind.login.LoginForm.setPassword: </td>
-	<td><b>setPassword("somehting")</b></td>
+	<td><b>setPassword("intern@123")</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:43590</td>
+	<td>2019-06-17 12:06:39936</td>
 	<td> aravind.login.LoginForm.setUsername: </td>
 	<td><b>setUsername("Aravinda Kumar")</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:43591</td>
+	<td>2019-06-17 12:06:39938</td>
 	<td> aravind.login.LoginForm.validate: </td>
 	<td><b>in validate</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:43597</td>
+	<td>2019-06-17 12:06:39940</td>
 	<td> aravind.author.Author.createConnection: </td>
-	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, root@123</b></td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44542</td>
+	<td>2019-06-17 12:06:4064</td>
 	<td> aravind.author.Author.matchPassword: </td>
 	<td><b>sql query used: SELECT * FROM author WHERE username = 'Aravinda Kumar';</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44543</td>
+	<td>2019-06-17 12:06:4064</td>
 	<td> aravind.author.Author.createConnection: </td>
-	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, root@123</b></td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td style="color:red"<b>WARNING</b></td>
-	<td>2019-06-17 03:35:44559</td>
+	<td>2019-06-17 12:06:4068</td>
 	<td> aravind.author.Author.matchPassword: </td>
-	<td><b>dbPassword: somehting, password: somehting</b></td>
+	<td><b>dbPassword: intern@123, password: intern@123</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44560</td>
+	<td>2019-06-17 12:06:4068</td>
 	<td> aravind.login.LoginForm.validate: </td>
 	<td><b>It's a match for username: Aravinda Kumar</b></td>
 </tr>
 </table><table border="1"><tr>
-	<td style="color:red"<b>WARNING</b></td>
-	<td>2019-06-17 03:35:44561</td>
-	<td> aravind.login.LoginForm.validate: </td>
-	<td><b>{}</b></td>
-</tr>
-</table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44567</td>
+	<td>2019-06-17 12:06:4071</td>
 	<td> aravind.login.LoginAction.<init>: </td>
 	<td><b>LoginAction.java</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44568</td>
+	<td>2019-06-17 12:06:4071</td>
 	<td> aravind.login.LoginAction.execute: </td>
-	<td><b>Start execute(aravind.login.LoginForm@4bfb21) . . .</b></td>
+	<td><b>Start execute(aravind.login.LoginForm@695e5c0f) . . .</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44577</td>
+	<td>2019-06-17 12:06:4081</td>
 	<td> org.apache.jsp.home_jsp._jspService: </td>
 	<td><b>Aravinda Kumar</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44579</td>
+	<td>2019-06-17 12:06:4081</td>
 	<td> aravind.note.Note.getNotes: </td>
 	<td><b>SELECT * FROM notes WHERE username = 'Aravinda Kumar';</b></td>
 </tr>
 </table><table border="1"><tr>
 	<td>INFO</td>
-	<td>2019-06-17 03:35:44580</td>
+	<td>2019-06-17 12:06:4082</td>
 	<td> aravind.note.Note.createConnection: </td>
-	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, root@123</b></td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:06:49618</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:06:50919</td>
+	<td> aravind.login.LoginForm.validate: </td>
+	<td><b>in validate</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td style="color:red"<b>WARNING</b></td>
+	<td>2019-06-17 12:06:50919</td>
+	<td> aravind.login.LoginForm.validate: </td>
+	<td><b>in validate() username or password is null</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:06:50923</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:01266</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:04207</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21774</td>
+	<td> aravind.login.LoginForm.setPassword: </td>
+	<td><b>setPassword("intern@123")</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21775</td>
+	<td> aravind.login.LoginForm.setUsername: </td>
+	<td><b>setUsername("Aravinda Kumar")</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21775</td>
+	<td> aravind.login.LoginForm.validate: </td>
+	<td><b>in validate</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21775</td>
+	<td> aravind.author.Author.createConnection: </td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21780</td>
+	<td> aravind.author.Author.matchPassword: </td>
+	<td><b>sql query used: SELECT * FROM author WHERE username = 'Aravinda Kumar';</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21781</td>
+	<td> aravind.author.Author.createConnection: </td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td style="color:red"<b>WARNING</b></td>
+	<td>2019-06-17 12:07:21785</td>
+	<td> aravind.author.Author.matchPassword: </td>
+	<td><b>dbPassword: intern@123, password: intern@123</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21786</td>
+	<td> aravind.login.LoginForm.validate: </td>
+	<td><b>It's a match for username: Aravinda Kumar</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21786</td>
+	<td> aravind.login.LoginAction.execute: </td>
+	<td><b>Start execute(aravind.login.LoginForm@6b14e75b) . . .</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21788</td>
+	<td> org.apache.jsp.home_jsp._jspService: </td>
+	<td><b>Aravinda Kumar</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21789</td>
+	<td> aravind.note.Note.getNotes: </td>
+	<td><b>SELECT * FROM notes WHERE username = 'Aravinda Kumar';</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:21789</td>
+	<td> aravind.note.Note.createConnection: </td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:30897</td>
+	<td> org.apache.jsp.home_jsp._jspService: </td>
+	<td><b>Aravinda Kumar</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:30897</td>
+	<td> aravind.note.Note.getNotes: </td>
+	<td><b>SELECT * FROM notes WHERE username = 'Aravinda Kumar';</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:30898</td>
+	<td> aravind.note.Note.createConnection: </td>
+	<td><b>Attempting to create connection with: jdbc:mysql://localhost:3306/notes, root, intern@123</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:32487</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:48898</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:48905</td>
+	<td> org.apache.jsp.home_jsp._jspService: </td>
+	<td><b>r is null</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:51358</td>
+	<td> aravind.login.LoginForm.validate: </td>
+	<td><b>in validate</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td style="color:red"<b>WARNING</b></td>
+	<td>2019-06-17 12:07:51358</td>
+	<td> aravind.login.LoginForm.validate: </td>
+	<td><b>in validate() username or password is null</b></td>
+</tr>
+</table><table border="1"><tr>
+	<td>INFO</td>
+	<td>2019-06-17 12:07:51359</td>
+	<td> org.apache.jsp.index_jsp._jspService: </td>
+	<td><b>index.jsp accessed</b></td>
 </tr>
 </table>

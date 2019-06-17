@@ -27,14 +27,8 @@ public class LoginAction extends Action {
             throws Exception
     {
         logger.info("Start execute(" + form + ") . . ." );
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        Author author = new Author();
-        author.setUsername(username);
-        author.setPassword(password);
-        req.setAttribute("AUTHOR", author);
 
-        req.getSession().setAttribute("username", author.getUsername());
+        req.getSession().setAttribute("username", req.getParameter("username"));
 
         return mapping.findForward("loginSuccess");
     }

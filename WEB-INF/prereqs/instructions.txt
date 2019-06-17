@@ -1,0 +1,26 @@
+Most of the prerequisites are with respect to DB.
+
+1) Change the log.txt file path in application.properties
+2) Update Environment Variables:
+	> CATALINA = E:\WebApp\apache-tomcat-9.0.21
+	> CLASSPATH = %CATALINA%\lib\jsp-api.jar;
+		      %CATALINA%\webapps\notes\WEB-INF\classes;
+		      E:\WebApp\struts-1.2.7\lib\struts.jar;
+		      %CATALINA%\lib\servlet-api.jar;
+                      %CATALINA%\lib\mysql-connector-java-8.0.16.jar;
+3) Create Database and Tables:
+	> CREATE DATABASE notes;
+	> CREATE TABLE author(
+    	  username VARCHAR(50) NOT NULL,
+    	  password VARCHAR(50) NOT NULL,
+          CONSTRAINT pk PRIMARY KEY (username)
+          );
+	> CREATE TABLE notes(
+    	  title VARCHAR(100) NOT NULL,
+    	  content Longtext NOT NULL,
+    	  created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    	  edited_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          username VARCHAR(50) NOT NULL,
+          CONSTRAINT pk PRIMARY KEY(username, title),
+          CONSTRAINT fk FOREIGN KEY(username) REFERENCES author(username)
+          );

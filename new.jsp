@@ -89,14 +89,19 @@
           <textarea name="title" rows="1" cols="23" placeholder="Title goes here..."
             style="font-size: 44pt"></textarea>
           <br>
-          <textarea name="content" rows="25" cols="100" placeholder="Note goes here..."></textarea>
+          <textarea name="content" id="contentTextArea" rows="25" cols="100" placeholder="Note goes here..." wrap="hard"></textarea>
           <br>
-          <input type="submit">
+          <input type="submit" onClic="myFunction()">
         </html:form>
         <script>
             if ( window.history.replaceState ) {
               window.history.replaceState( null, null, window.location.href );
             }
+            function myFunction() {
+                var text = document.getElementById("contentTextArea").value;
+                text = text.replace(/\r?\n/g, '<br />');
+            }
         </script>
+
     </body>
 </html:html>

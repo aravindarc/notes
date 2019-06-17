@@ -7,12 +7,6 @@
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%
-    response.setHeader("Cache-Control","no-cache"); //Forces caches to obtain a new copy of the page from the origin server
-    response.setHeader("Cache-Control","no-store"); //Directs caches not to store the page under any circumstance
-    response.setHeader("Cache-Control","must-revalidate"); //Directs caches not to store the page under any circumstance
-    response.setDateHeader("Expires", 0); //Causes the proxy cache to see the page as "stale"
-    response.setHeader("Pragma","no-cache"); //HTTP 1.0 backward compatibility
-
     String username = (String) session.getAttribute("username");
     if(null == username) {
         request.setAttribute("Error", "Session has ended. Please login.");
@@ -21,7 +15,11 @@
     }
 %>
 <html:html locale="true">
+
     <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
         <style>
             ul {
               list-style-type: none;
@@ -65,11 +63,11 @@
 
             .main {
               text-align: left;
-              background: gainsboro;
+              background: darkgray;
             }
 
-            .header {background: darkmagenta;}
-            .footer {background: lightgreen;}
+            .header {background: silver;}
+            .footer {background: gray;}
             .aside {background: moccasin;}
 
             @media all and (min-width: 768px) {
@@ -108,7 +106,7 @@
                     out.println("<p>" + r.getString("content") + "</p>");
                     out.println("</article>");
                     try {
-                    out.println("<footer class=\"footer\">" + "Created On: " + r.getDate("created_time") + "       " + "Edited On: " + r.getDate("edited_time") + "</footer>");
+                    out.println("<footer class=\"footer\">" + "Created On: " + r.getDate("created_time") + "\n" + "Edited On: " + r.getDate("edited_time") + "</footer>");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -119,6 +117,8 @@
             }
 
         %>
+
+        <!--
         <div class="flex-container">
           <header class="header">Header</header>
           <article class="main">
@@ -126,14 +126,7 @@
           </article>
           <footer class="footer">Footer</footer>
         </div>
-
-        <div class="flex-container">
-            <header class="header">Header</header>
-            <article class="main">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed ex turpis. Cras luctus nibh lectus, in ullamcorper ex tempor eleifend. Nulla bibendum, eros a consequat vestibulum, orci massa fermentum quam, sed commodo nunc ex vitae nisl. Aliquam ullamcorper interdum est nec tincidunt.</p>
-            </article>
-            <footer class="footer">Footer</footer>
-        </div>
+        -->
 
         <script>
         if ( window.history.replaceState ) {

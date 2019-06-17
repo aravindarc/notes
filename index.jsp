@@ -11,7 +11,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            body {font-family: Arial, Helvetica, sans-serif; background: #c2c2a3;}
+            body {font-family: Arial, Helvetica, sans-serif; background: gray;}
             form {border: 3px solid #f1f1f1; width: 100%; display:inline-block;}
 
             .content {

@@ -59,7 +59,7 @@ public class LoginForm extends ActionForm {
 
         if(author.getUsername() == null || author.getPassword() == null) {
             logger.warning("in validate() username or password is null");
-            errors.add("null", new ActionError("error.null"));
+            errors.add("null", new ActionError("error.login.null"));
         }
         else {
             if(author.checkIfUsernameIsUnique()) {
