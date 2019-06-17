@@ -86,20 +86,16 @@
         </ul>
 
         <html:form action="newNote" style="margin-top: 10px;" method="POST">
-          <textarea name="title" rows="1" cols="23" placeholder="Title goes here..."
-            style="font-size: 44pt"></textarea>
+          <textarea name="title" rows="1" cols="29" placeholder="Title goes here..."
+            style="font-size: 35pt" required></textarea>
           <br>
-          <textarea name="content" id="contentTextArea" rows="25" cols="100" placeholder="Note goes here..." wrap="hard"></textarea>
+          <textarea name="content" id="contentTextArea" rows="25" cols="100" placeholder="Note goes here..." required></textarea>
           <br>
-          <input type="submit" onClic="myFunction()">
+          <input type="submit">
         </html:form>
         <script>
             if ( window.history.replaceState ) {
               window.history.replaceState( null, null, window.location.href );
-            }
-            function myFunction() {
-                var text = document.getElementById("contentTextArea").value;
-                text = text.replace(/\r?\n/g, '<br />');
             }
         </script>
 

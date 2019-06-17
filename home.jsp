@@ -54,6 +54,7 @@
               text-align: center;
               margin-top: 20px;
               margin-bottom: 20px;
+              font-family: "Courier";
             }
 
             .flex-container > * {
@@ -64,10 +65,21 @@
             .main {
               text-align: left;
               background: darkgray;
+              font-weight: normal;
+              font-size: 20px;
             }
 
-            .header {background: silver;}
-            .footer {background: gray;}
+            .header {
+                background: silver;
+                font-weight: bold;
+                font-style: oblique;
+                font-size: 25px;
+            }
+            .footer {
+                background: gray;
+                font-weight: normal;
+                font-size: 15px;
+            }
             .aside {background: moccasin;}
 
             @media all and (min-width: 768px) {
@@ -102,8 +114,9 @@
                 while(r.next()) {
                     out.println("<div class=\"flex-container\">");
                     out.println("<header class=\"header\">" + r.getString("title") + "</header>");
+
                     out.println("<article class=\"main\">");
-                    out.println("<p>" + r.getString("content") + "</p>");
+                    out.println("<pre>" + r.getString("content") + "</pre>");
                     out.println("</article>");
                     try {
                     out.println("<footer class=\"footer\">" + "Created On: " + r.getDate("created_time") + "\n" + "Edited On: " + r.getDate("edited_time") + "</footer>");
@@ -121,6 +134,7 @@
         <!--
         <div class="flex-container">
           <header class="header">Header</header>
+          <aside class="aside">Aside</aside>
           <article class="main">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed ex turpis. Cras luctus nibh lectus, in ullamcorper ex tempor eleifend. Nulla bibendum, eros a consequat vestibulum, orci massa fermentum quam, sed commodo nunc ex vitae nisl. Aliquam ullamcorper interdum est nec tincidunt.</p>
           </article>
